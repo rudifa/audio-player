@@ -1,16 +1,20 @@
 ---
-
+import AudioPlayer from "../components/audio-player.js";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <h1>Astro</h1>
+    <AudioPlayer audioUrl='/croatian.mp3' client:only='lit' />
+    <!-- <button onclick="document.querySelector('audio-player').handlePlayPause()"
+      >Play/Pause</button
+    > -->
+  </body>
 </html>

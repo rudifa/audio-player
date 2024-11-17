@@ -12,9 +12,12 @@ import AudioPlayer from "../components/audio-player.js";
   </head>
   <body>
     <h1>Astro</h1>
+    <h2>Audio Player with Own Button</h2>
     <AudioPlayer audioUrl='/croatian.mp3' client:only='lit' />
-    <!-- <button onclick="document.querySelector('audio-player').handlePlayPause()"
-      >Play/Pause</button
-    > -->
+
+    <h2>Audio Player with External Button</h2>
+    <AudioPlayer audioUrl='/croatian.mp3' client:load>
+      <button slot='button'>Custom Play/Stop</button>
+    </AudioPlayer>
   </body>
 </html>
